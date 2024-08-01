@@ -16,4 +16,14 @@
     .btn-primary{
         @apply bg-blue-500 hover:bg-blue-700 text-white
     }
+
+    .score-dot-fail{
+        @apply w-5 h-5 rounded-full bg-red-500
+    }
+    .score-dot-correct{
+        @apply w-5 h-5 rounded-full bg-green-500
+    }
+    .score-dot-none{
+        @apply w-5 h-5 rounded-full bg-slate-500
+    }
 }
