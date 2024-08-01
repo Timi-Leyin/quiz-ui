@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz | Login</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body id="login">
+    <main>
+      <section class="grid grid-cols-2 min-h-screen">
+        <div class="flex justify-center items-center h-full bg-blue-200">
+          <div class="w-[250px]">
+            <i class="fa fa-quote-left" aria-hidden="true"></i>
+            <p class="">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam
+              illo aliquam tempora eos sint, ipsam, vel voluptates rerum
+              aperiam, amet nulla non a maiores officia. Molestiae officia
+              accusantium ducimus corrupti.
+            </p>
+            <div class="p font-bold my-3">- OriginalTImi</div>
+          </div>
+        </div>
+
+        <div class="relative p-5 flex justify-center items-center">
+          <h4 class="text-4xl absolute top-6 left-6 font-semibold">Quizzz</h4>
+
+          <form action="" id="login-form-action">
+            <div class="">
+              <h3 class="text-3xl font-bold">Login to your account</h3>
+              <p class="text-sm">With your registered email address</p>
+            </div>
+
+            <div class="my-4">
+              <div class="flex my-4 flex-col">
+                <label for="" class="text-xs">Email Address</label>
+                <input
+                  type="email"
+                  name="email"
+                  class="p-3 text-xs bg-gray-200 my-1 rounded-md outline-none"
+                  placeholder="Enter email address"
+                  id=""
+                />
+              </div>
+
+              <div class="flex my-4 flex-col">
+                <label for="" class="text-xs">Password</label>
+                <input
+                  type="password"
+                  name="password"
+                  class="p-3 text-xs bg-gray-200 my-1 rounded-md outline-none"
+                  placeholder="Password"
+                  id=""
+                />
+              </div>
+
+              <div class="flex gap-2 text-xs items-center my-4">
+                <input type="checkbox" name="remember-me" id="" />
+                <span>Remember my password</span>
+              </div>
+            </div>
+
+            <div class="">
+              <p
+                id="form-feedback-error"
+                class="font-bold text-xs my-2 text-red-500"
+              ></p>
+              <p
+                id="form-feedback-success"
+                class="font-bold text-xs my-2 text-green-500"
+              ></p>
+              <button class="btn btn-primary w-full">Login</button>
+              <p class="text-xs my-3">
+                Don't have an account?
+                <a
+                  href="/auth/signup.html"
+                  class="font-bold text-blue-400 underline"
+                  >Sign up</a
+                >
+              </p>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

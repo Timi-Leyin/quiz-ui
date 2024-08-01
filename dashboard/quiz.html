@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz | Dashboard | Start</title>
+    <link rel="stylesheet" href="/src/styles/quiz.css">
+  </head>
+  <body id="dashboard-quiz-one">
+    <main>
+       
+          <header class="p-6 flex justify-between items-center">
+          <div class="flex gap-3 items-center">
+            <div class="">
+                <div class="fa fa-clock text-3xl"></div>
+                <span class="text-2xl font-semibold">0:00</span>
+            </div>
+            <div class="easy text-xs font-bold rounded-lg text-yellow-800 bg-yellow-300 p-2">Easy</div>
+          </div>
+
+
+          <div id="scoreboard">
+            
+          </div>
+
+          <div id="score-number" class="text-3xl">
+            0/10
+          </div>
+          </header>
+        
+               <section class="max-w-[900px] mx-auto">
+              
+                <div class="question p-12" id="question">
+                    <h3 class="question-text text-4xl mb-4" id="question-text">Loading ... </h3>
+                    <p class="text-sm font-bold">Choose one answer</p>
+                    <hr class="m-4" />
+                    <div class="*:block *:p-4 my-2 *:w-full *:text-left" id="options-buttons"></div>
+                    <h6 class="explanation bg-green-400 p-4 text-green-800 font-bold border-l-4 border-green-800" id="explanation"></h6>
+                    <button class="next w-full my-5 btn btn-primary" id="next">Next</button>
+                </div>
+               </section>
+           
+        </html>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="/src/scripts/quiz.ts"></script>
+  </body>
+</html>

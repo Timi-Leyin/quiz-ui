@@ -1,0 +1,21 @@
+
+
+.options-buttons:hover:not([disabled]) {
+    background-color: #444;
+    color: white;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.options-buttons:disabled {
+    cursor: no-drop;
+}
+
+
+.correct {
+    background-color: rgb(81, 224, 81);
+}
+
+.incorrect {
+    background-color: rgb(239, 114, 114);
+}

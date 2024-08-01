@@ -6,3 +6,14 @@
 *{
     font-family: "Plus Jakarta Sans", sans-serif !important;
 }
+
+
+@layer components{
+    .btn{
+        @apply p-4 rounded-md outline-none text-xs font-bold
+    }
+
+    .btn-primary{
+        @apply bg-blue-500 hover:bg-blue-700 text-white
+    }
+}

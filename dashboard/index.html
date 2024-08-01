@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz | Dashboard</title>
+  </head>
+  <body id="dashboard">
+    <main>
+      <div class="flex h-screen">
+        <!-- Sidebar -->
+        <div class="w-64 bg-white lg p-5">
+          <div class="p-4 flex items-center">
+            <div
+              class="rounded-full bg-blue-500 w-8 h-8 flex items-center justify-center text-white"
+            >
+              C
+            </div>
+            <h1 class="text-xl font-bold ml-2">Cyberverdict</h1>
+          </div>
+          <nav class="mt-8 flex flex-col gap-3">
+            <a
+              href="#"
+              class="flex items-center py-4 gap-3 px-4 text-blue-600 bg-blue-50 rounded-md"
+            >
+              <i class="fa-solid fa-clock-rotate-left"></i>
+              Dashboard
+            </a>
+            <a
+              href="#"
+              class="flex items-center py-4 gap-3 px-4 text-gray-700 hover:bg-gray-200"
+            >
+              <i class="fa fa-bell"></i>
+              Notification
+            </a>
+            <a
+              href="#"
+              class="flex items-center py-4 gap-3 px-4 text-gray-700 hover:bg-gray-200"
+            >
+              <div class="fa fa-bar-chart"></div>
+              Achievements
+            </a>
+            <a
+              href="#"
+              class="flex items-center py-4 gap-3 px-4 text-gray-700 hover:bg-gray-200"
+            >
+              <i class="fa fa-clock-rotate-left"></i>
+              Quiz History
+            </a>
+          </nav>
+          <div class="p-4 mt-auto">
+            <!-- <img
+              src="https://picsum.photos/400/400"
+              class="rounded-lg"
+              alt=""
+            /> -->
+            <!-- <button class="w-full py-2 px-4 bg-blue-600 text-white rounded">Support FAQ</button> -->
+            <button
+              class="w-full btn py-4 px-4 bg-red-600 text-white rounded mt-2"
+            >
+              Log Out
+            </button>
+          </div>
+        </div>
+        <!-- Main Content -->
+        <main class="flex-1 p-8 overflow-y-auto">
+          <div class="flex justify-between items-center mb-8">
+            <div class="relative flex-1">
+              <input
+                type="text"
+                placeholder="Search Quiz"
+                class="pl-10 pr-4 py-4 w-full rounded-full border border-gray-300 focus:outline-none text-xs focus:ring-2 focus:ring-cyberblue focus:border-transparent"
+              />
+              <i
+                class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+              ></i>
+            </div>
+            <div class="flex items-center">
+              <button class="btn-primary btn text-white mx-5 py-4 rounded-full">
+                Start Quiz
+              </button>
+              <img
+                src="https://picsum.photos/40/40"
+                alt="Profile"
+                class="w-10 h-10 rounded-full"
+              />
+            </div>
+          </div>
+
+          <!-- User Profile -->
+          <div class="bg-white rounded-lg p-6 mb-8">
+            <div class="flex gap-4 flex-col">
+              <div class="flex items-center space-x-4">
+                <img
+                  src="https://picsum.photos/80/80"
+                  alt="Michael Clifford"
+                  class="w-20 h-20 rounded-lg"
+                />
+                <div>
+                  <h2 class="text-2xl font-bold text-blue-600">
+                    Michael Clifford
+                  </h2>
+                  <p class="text-xs">Bonus booster 24lv</p>
+
+                  <div class="my-3">
+                    <progress
+                      value="40"
+                      max="100"
+                      class="p-1 rounded-md"
+                    ></progress>
+                  </div>
+                </div>
+              </div>
+              <div class="flex gap-6">
+                <div class="p-4">
+                  <i class="fa fa-flag text-blue-600"></i>
+                </div>
+                <div class="">
+                  <p class="font-bold text-2xl">27</p>
+                  <p class="text-gray-600">Quiz Passed</p>
+                </div>
+                <div class="p-4">
+                  <i class="fa fa-clock text-blue-600"></i>
+                </div>
+                <div class="">
+                  <p class="font-bold text-2xl">27min</p>
+                  <p class="text-gray-600">Fastest Time</p>
+                </div>
+                <div class="p-4">
+                  <i class="fa fa-check text-blue-600"></i>
+                </div>
+                <div class="text-center">
+                  <p class="font-bold text-2xl">200</p>
+                  <p class="text-gray-600">Correct Answers</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Featured Quizzes -->
+          <div class="flex justify-between items-center mb-4">
+            <h3 class="text-xl font-bold">Featured Quizzes</h3>
+            <!-- <a href="#" class="text-cyberblue hover:underline">View All</a> -->
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div
+              class="bg-purple-700 text-white rounded-lg overflow-hidden relative"
+            >
+              <img
+                src="https://picsum.photos/400/200"
+                alt="Quiz 1"
+                class="w-full h-40 object-cover"
+              />
+              <div class="p-4">
+                <h4 class="font-bold mb-2">
+                  Protecting the Organization against Phishing Attacks
+                </h4>
+                <p class="text-sm">15 min</p>
+              </div>
+            </div>
+            <div
+              class="bg-red-700 text-white rounded-lg overflow-hidden relative"
+            >
+              <img
+                src="https://picsum.photos/400/200"
+                alt="Quiz 2"
+                class="w-full h-40 object-cover"
+              />
+              <div class="p-4">
+                <h4 class="font-bold mb-2">
+                  Ransomware and Attack Landscape in Corporate
+                </h4>
+                <p class="text-sm">15 min</p>
+              </div>
+            </div>
+            <div
+              class="bg-gray-700 text-white rounded-lg overflow-hidden relative"
+            >
+              <img
+                src="https://picsum.photos/400/200"
+                alt="Quiz 3"
+                class="w-full h-40 object-cover"
+              />
+              <div class="p-4">
+                <h4 class="font-bold mb-2">
+                  Keeping Debit & Credit Cards safe: Best Practices
+                </h4>
+                <p class="text-sm">15 min</p>
+              </div>
+            </div>
+          </div>
+        </main>
+
+        <!-- Right Sidebar -->
+        <aside class="w-64 bg-white shadow-md p-4">
+          <h3 class="font-bold mb-4">Other Users Online</h3>
+          <div class="flex flex-wrap gap-2 mb-8">
+            <div class="w-10 h-10 bg-green-400 rounded-full"></div>
+            <div class="w-10 h-10 bg-orange-400 rounded-full"></div>
+            <div class="w-10 h-10 bg-purple-400 rounded-full"></div>
+            <div class="w-10 h-10 bg-red-400 rounded-full"></div>
+            <div class="w-10 h-10 bg-yellow-400 rounded-full"></div>
+            <div
+              class="w-10 h-10 bg-cyberdark rounded-full flex items-center justify-center text-white text-xs"
+            >
+              20+
+            </div>
+          </div>
+          <div class="mb-8">
+            <div class="flex justify-between items-center mb-4">
+              <h3 class="font-bold">Achievements</h3>
+              <a href="#" class="text-cyberblue hover:underline text-sm"
+                >View All</a
+              >
+            </div>
+            <div class="flex space-x-2">
+              <div class="w-12 h-12 bg-yellow-400 rounded"></div>
+              <div class="w-12 h-12 bg-gray-300 rounded"></div>
+              <div class="w-12 h-12 bg-blue-400 rounded"></div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
