@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Quiz | Login</title>
+		<title>Quiz | Get Started</title>
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -30,10 +30,10 @@
 				<div class="relative p-5 flex justify-center items-center">
 					<h4 class="text-4xl absolute top-6 left-6 font-semibold">Quizzz</h4>
 
-					<form action="" id="login-form-action">
+					<form action="" id="register-form-action">
 						<div class="">
-							<h3 class="text-3xl font-bold">Login to your account</h3>
-							<p class="text-sm">With your registered email address</p>
+							<h3 class="text-3xl font-bold">Create an account</h3>
+							<p class="text-sm">With your email address</p>
 						</div>
 
 						<div class="my-4">
@@ -44,6 +44,28 @@
 									name="email"
 									class="p-3 text-xs bg-gray-200 my-1 rounded-md outline-none"
 									placeholder="Enter email address"
+									id=""
+								/>
+							</div>
+
+                            <div class="flex my-4 flex-col">
+								<label for="" class="text-xs">First Name</label>
+								<input
+									type="text"
+									name="firstName"
+									class="p-3 text-xs bg-gray-200 my-1 rounded-md outline-none"
+									placeholder="FirstName"
+									id=""
+								/>
+							</div>
+
+                            <div class="flex my-4 flex-col">
+								<label for="" class="text-xs">Last Name</label>
+								<input
+									type="text"
+									name="lastName"
+									class="p-3 text-xs bg-gray-200 my-1 rounded-md outline-none"
+									placeholder="lastName"
 									id=""
 								/>
 							</div>
@@ -74,13 +96,13 @@
 								id="form-feedback-success"
 								class="font-bold text-xs my-2 text-green-500"
 							></p>
-							<button class="btn btn-primary w-full">Login</button>
+							<button class="btn btn-primary w-full">Create Account</button>
 							<p class="text-xs my-3">
-								Don't have an account?
+								Already have an account?
 								<a
-									href="/auth/register.html"
+									href="/auth/login.html"
 									class="font-bold text-blue-400 underline"
-									>Sign up</a
+									>Login</a
 								>
 							</p>
 						</div>
@@ -89,5 +111,6 @@
 			</section>
 		</main>
 		<script type="module" src="/src/main.ts"></script>
+		<script type="module" src="/src/scripts/register.ts"></script>
 	</body>
 </html>

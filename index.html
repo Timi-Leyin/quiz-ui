@@ -4,12 +4,52 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quiz</title>
+    <title>Ultimate Quiz Challenge</title>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <main id="app"></main>
-    <h1 class="text-3xl font-bold underline">Hello</h1>
-    <a href="/auth/login.html">go</a>
+  <body class="bg-gradient-to-r from-blue-100 to-purple-100 min-h-screen">
+    <main id="app" class="container mx-auto px-4 py-8">
+      <div class="bg-white rounded-lg shadow-xl p-8 max-w-4xl mx-auto">
+        <h1 class="text-4xl font-bold text-center text-indigo-600 mb-6">Welcome to the Ultimate Quiz Challenge!</h1>
+        
+        <p class="text-xl text-gray-700 text-center mb-8">Test your knowledge, challenge your mind, and have fun with our exciting quizzes.</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <div class="bg-indigo-100 p-4 rounded-lg">
+            <h2 class="text-lg font-semibold text-indigo-800 mb-2">Multiple Categories</h2>
+            <p class="text-gray-600">From history to pop culture, we've got quizzes for every interest.</p>
+          </div>
+          <div class="bg-purple-100 p-4 rounded-lg">
+            <h2 class="text-lg font-semibold text-purple-800 mb-2">Difficulty Levels</h2>
+            <p class="text-gray-600">Choose from easy, medium, or expert quizzes to match your skill level.</p>
+          </div>
+          <div class="bg-blue-100 p-4 rounded-lg">
+            <h2 class="text-lg font-semibold text-blue-800 mb-2">Leaderboards</h2>
+            <p class="text-gray-600">Compete with friends and see how you rank against other quiz enthusiasts.</p>
+          </div>
+        </div>
+        
+        <div class="text-center mb-8">
+          <h3 class="text-2xl font-semibold text-gray-800 mb-4">How It Works</h3>
+          <ol class="list-decimal list-inside text-left max-w-md mx-auto text-gray-700">
+            <li class="mb-2">Sign up or log in to your account</li>
+            <li class="mb-2">Choose a quiz category and difficulty</li>
+            <li class="mb-2">Answer questions within the time limit</li>
+            <li>See your results and compare with others</li>
+          </ol>
+        </div>
+        
+        <div class="text-center">
+          <a href="/auth/login.html" class="inline-block bg-indigo-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-indigo-700 transition duration-300 ease-in-out transform hover:scale-105">
+            Start Your Quiz Adventure
+          </a>
+        </div>
+      </div>
+      
+      <footer class="mt-8 text-center text-gray-600">
+        <p>&copy; 2024 Ultimate Quiz Challenge. All rights reserved.</p>
+      </footer>
+    </main>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
