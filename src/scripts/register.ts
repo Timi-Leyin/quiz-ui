@@ -1,6 +1,8 @@
+import { API } from "../api";
+
 const registerForm = document.querySelector("#register-form-action");
 
-registerForm?.addEventListener("submit", (ev) => {
+registerForm?.addEventListener("submit", async (ev) => {
 	ev.preventDefault();
 	ev.stopPropagation();
 
@@ -25,5 +27,19 @@ registerForm?.addEventListener("submit", (ev) => {
 		alert("All Fields are required.");
 		return;
 	}
-	alert("Submitting.");
+
+	// API CALL
+	try {
+		const response = await API.post("/auth/register", {
+			email: email.value,
+			firstName: firstName.value,
+			lastName: lastName.value,
+			password: password.value,
+		});
+		alert(response.data.message);
+		localStorage.setItem("@token", response.data.accessToken);
+		window.location.replace("/dashboard/index.html");
+	} catch (error: any) {
+		alert(error.response.data.message);
+	}
 });
