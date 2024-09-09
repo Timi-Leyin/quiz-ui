@@ -6,8 +6,8 @@ registerForm?.addEventListener("submit", async (ev) => {
 	ev.preventDefault();
 	ev.stopPropagation();
 
-	const button = registerForm.querySelector("button");
-	const btnInitialValue = button?.innerHTML;
+	// const button = registerForm.querySelector("button");
+	// const btnInitialValue = button?.innerHTML;
 	const email = registerForm.querySelector(
 		"input[name='email']"
 	) as HTMLInputElement;

@@ -4,13 +4,48 @@
 		<meta charset="UTF-8" />
 		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Quiz | Dashboard</title>
+		<title>Quiz | Leaderboard</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+		/>
+		<style>
+			.table-container {
+				overflow-x: auto;
+			}
+			table {
+				width: 100%;
+				border-collapse: collapse;
+				margin: 20px 0;
+				font-size: 16px;
+				text-align: left;
+			}
+			table thead {
+				background-color: #007bff;
+				color: #ffffff;
+			}
+			table th,
+			table td {
+				padding: 12px;
+				border-bottom: 1px solid #dddddd;
+			}
+			table tbody tr:hover {
+				background-color: #f1f1f1;
+			}
+			.table-container::-webkit-scrollbar {
+				height: 8px;
+			}
+			.table-container::-webkit-scrollbar-thumb {
+				background-color: #007bff;
+				border-radius: 4px;
+			}
+		</style>
 	</head>
 	<body id="dashboard">
 		<section
 			id="level-popup"
 			style="display: none; backdrop-filter: blur(10px)"
-			class="fixed top-0 left- w-screen h-screen bg-white/70 z-10 flex justify-center items-center"
+			class="fixed top-0 left-0 w-screen h-screen bg-white/70 z-10 flex justify-center items-center"
 		>
 			<div
 				id="close-level-popup"
@@ -56,7 +91,7 @@
 					<nav class="mt-8 flex flex-col gap-3">
 						<a
 							href="/dashboard/index.html"
-							class="flex items-center py-4 gap-3 px-4 text-blue-600 bg-blue-50 rounded-md"
+							class="flex items-center py-4 gap-3 px-4 rounded-md text-gray-700 hover:bg-gray-200"
 						>
 							<i class="fa-solid fa-clock-rotate-left"></i>
 							Dashboard
@@ -71,19 +106,13 @@
 						</a>
 						<a
 							href="/dashboard/leaderboard.html"
-							class="flex items-center py-4 gap-3 px-4 text-gray-700 hover:bg-gray-200"
+							class="flex items-center py-4 gap-3 px-4 text-blue-600 bg-blue-50"
 						>
 							<i class="fa fa-arrow-up"></i>
 							Leaderboard
 						</a>
 					</nav>
 					<div class="p-4 mt-auto">
-						<!-- <img
-              src="https://picsum.photos/400/400"
-              class="rounded-lg"
-              alt=""
-            /> -->
-						<!-- <button class="w-full py-2 px-4 bg-blue-600 text-white rounded">Support FAQ</button> -->
 						<a href="/auth/login.html">
 							<button
 								class="w-full btn py-4 px-4 bg-red-600 text-white rounded mt-2"
@@ -122,91 +151,29 @@
 						</div>
 					</div>
 
-					<!-- User Profile -->
 					<div class="bg-white rounded-lg p-6 mb-8">
-						<div class="flex gap-4 flex-col">
-							<div class="flex items-center space-x-4">
-								<img
-									src="https://picsum.photos/80/80"
-									alt="Profile Photo"
-									class="w-20 h-20 rounded-lg"
-								/>
-								<div>
-									<h2 id="user-name" class="text-2xl font-bold text-blue-600">
-										-
-									</h2>
-									<p id="display-email" class="text-xs">-</p>
-
-									<div class="my-3">
-										<progress
-											value="40"
-											max="100"
-											class="p-1 rounded-md"
-										></progress>
-									</div>
-								</div>
-							</div>
-							<section id="admin-contents"></section>
-							<div class="flex gap-6">
-								<div class="p-4">
-									<i class="fa fa-flag text-blue-600"></i>
-								</div>
-								<div class="">
-									<p id="quiz-played-counter" class="font-bold text-2xl">-</p>
-									<p class="text-gray-600">Quiz Played</p>
-								</div>
-								<div class="p-4">
-									<i class="fa fa-clock text-blue-600"></i>
-								</div>
-								<div class="">
-									<p id="fastest-time" class="font-bold text-2xl">27min</p>
-									<p class="text-gray-600">Fastest Time</p>
-								</div>
-								<div class="p-4">
-									<i class="fa fa-check text-blue-600"></i>
-								</div>
-								<div class="text-center">
-									<p id="correct-answers" class="font-bold text-2xl">-</p>
-									<p class="text-gray-600">Correct Answers</p>
-								</div>
-							</div>
+						<h2 class="text-3xl font-bold mb-4">Leaderboard</h2>
+						<div class="table-container">
+							<table>
+								<thead>
+									<tr>
+										<th>First Name</th>
+										<th>Last Name</th>
+										<th>Quiz Played</th>
+										<th>No. of Correct Answers</th>
+									</tr>
+								</thead>
+								<tbody id="leaderboard-table-body">
+                                    
+								</tbody>
+							</table>
 						</div>
-					</div>
-
-					<!-- Featured Quizzes -->
-					<div class="flex justify-between items-center mb-4">
-						<h3 class="text-xl font-bold">Recently added Quizzes</h3>
-						<!-- <a href="#" class="text-cyberblue hover:underline">View All</a> -->
-					</div>
-					<div
-						class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-						id="f_quizes"
-					>
-						<!-- Q1 -->
 					</div>
 				</main>
-
-				<!-- Right Sidebar -->
-				<aside class="w-64 bg-white shadow-md p-4">
-					<div class="mb-8">
-						<div class="flex justify-between items-center mb-4">
-							<h3 class="font-bold">Achievements</h3>
-							<a href="#" class="text-cyberblue hover:underline text-sm"
-								>View All</a
-							>
-						</div>
-						<div class="flex space-x-2">
-							<div class="w-12 h-12 bg-yellow-400 rounded"></div>
-							<div class="w-12 h-12 bg-gray-300 rounded"></div>
-							<div class="w-12 h-12 bg-blue-400 rounded"></div>
-						</div>
-					</div>
-				</aside>
 			</div>
 		</main>
 		<script type="module" src="/src/main.ts"></script>
-		<script type="module" src="/src/scripts/profile.ts"></script>
+		<script type="module" src="/src/scripts/leaderboard.ts"></script>
 		<script src="/src/scripts/start-quiz-pop.ts"></script>
-		<script type="module" src="../src/scripts/home.ts"></script>
 	</body>
 </html>

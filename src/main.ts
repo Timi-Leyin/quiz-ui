@@ -1,2 +1,2 @@
 import "./styles/global.css";
-import "./lib/all.min.js"
+import "./lib/all.min.js";

@@ -6,8 +6,8 @@ loginForm?.addEventListener("submit", async (ev) => {
 	ev.preventDefault();
 	ev.stopPropagation();
 
-	const button = loginForm.querySelector("button");
-	const btnInitialValue = button?.innerHTML;
+	// const button = loginForm.querySelector("button");
+	// const btnInitialValue = button?.innerHTML;
 	const email = loginForm.querySelector(
 		"input[name='email']"
 	) as HTMLInputElement;

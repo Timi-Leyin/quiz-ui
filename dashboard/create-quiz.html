@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Creator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+        <div class="p-8">
+            <h1 class="text-2xl font-bold text-gray-900 mb-6">Quiz Creator</h1>
+            <form id="quizForm" class="space-y-6">
+                <div>
+                    <label for="question" class="block text-sm font-medium text-gray-700">Question:</label>
+                    <input type="text" id="question" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                </div>
+                <div>
+                    <label for="level" class="block text-sm font-medium text-gray-700">Level:</label>
+                    <select required name="level" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" id="level">
+                        <option value="EASY">EASY</option>
+                        <option value="MEDIUM">MEDIUM</option>
+                        <option value="HARD">HARD</option>
+                    </select>
+                </div>
+                
+                <div class="space-y-4">
+                    <div>
+                        <label for="answer1" class="block text-sm font-medium text-gray-700">Answer 1:</label>
+                        <div class="mt-1 flex items-center">
+                            <input type="text" id="answer1" required class="block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                            <input type="radio" name="correct" id="correct1" value="0" class="ml-2 h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300">
+                            <label for="correct1" class="ml-2 block text-sm text-gray-900">Correct</label>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="answer2" class="block text-sm font-medium text-gray-700">Answer 2:</label>
+                        <div class="mt-1 flex items-center">
+                            <input type="text" id="answer2" required class="block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                            <input type="radio" name="correct" id="correct2" value="1" class="ml-2 h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300">
+                            <label for="correct2" class="ml-2 block text-sm text-gray-900">Correct</label>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="answer3" class="block text-sm font-medium text-gray-700">Answer 3:</label>
+                        <div class="mt-1 flex items-center">
+                            <input type="text" id="answer3" required class="block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                            <input type="radio" name="correct" id="correct3" value="2" class="ml-2 h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300">
+                            <label for="correct3" class="ml-2 block text-sm text-gray-900">Correct</label>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="answer4" class="block text-sm font-medium text-gray-700">Answer 4:</label>
+                        <div class="mt-1 flex items-center">
+                            <input type="text" id="answer4" required class="block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                            <input type="radio" name="correct" id="correct4" value="3" class="ml-2 h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300">
+                            <label for="correct4" class="ml-2 block text-sm text-gray-900">Correct</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="explanation" class="block text-sm font-medium text-gray-700">Explanation:</label>
+                    <textarea id="explanation" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" rows="3"></textarea>
+                </div>
+                
+                <div>
+                    <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                        Add Question
+                    </button>
+                </div>
+            </form>
+<!-- 
+            <div class="mt-8">
+                <h2 class="text-xl font-semibold text-gray-900 mb-4">Quiz JSON:</h2>
+                <textarea id="quizJson" readonly class="w-full h-64 p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" rows="10"></textarea>
+            </div> -->
+        </div>
+    </div>
+
+
+    <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="/src/scripts/create-quiz.ts"></script>
+</body>
+</html>
